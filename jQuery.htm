@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <select id="sltLang" multiple>
+        <option>Choose language</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="jQuery">jQuery</option>
+    </select>
+
+    <input type="submit" value="Submit">
+
+
+    <div id="result"></div>
+
+    <script>
+        $("input[type='submit']").on("click", function() {
+            var sltLang = $("#sltLang option:selected");
+            if (sltLang.length > 0) {
+                //$("div#result").html('Selected language: ' + sltLang.val());
+
+                $("option:selected").each(function() {
+                    $("div#result").append($(this).val() + "<br />");
+                });
+            } else {
+                $("div#result").text("No language selected");
+            }
+        });
+    </script>
+</body>
+</html>

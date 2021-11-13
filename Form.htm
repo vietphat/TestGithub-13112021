@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.form {
+            background-color: #f2f2f2;
+            width: 40%;
+            height: calc(100vh - 65vh);
+            padding: 30px;
+            margin: 100px auto;
+            border-radius: 8px;
+        }
+
+        input[type=text], select {
+            width: 100%;
+            padding: 10px 14px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 3px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            height: 50px;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type=text]:focus, select:focus {
+            border: 3px solid #04AA6D;
+            background-color: rgba(224, 234, 238, 0.233);
+        }
+
+        input[type=submit] {
+            width: 100%;
+            padding: 10px 14px;
+            margin: 8px 0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            height: 50px;
+            font-size: 20px;
+            background-color: #04AA6D;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        input[type=submit]:hover {
+            background-color: #0bc07e98;
+        }
+
+        option, label {
+            font-size: 18px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="form">
+        <form action="">
+            <label for="FirstName">First Name</label>
+            <input type="text" name="FirstName" id="" placeholder="Your first name...">
+
+            <label for="LastName">Last Name</label>
+            <input type="text" name="LastName" id="" placeholder="Your last name...">
+
+            <label for="Country">Country</label>
+            <select name="Country" id="">
+                <option value="USA">USA</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Cambodia">Cambodia</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
